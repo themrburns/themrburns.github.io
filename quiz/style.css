@@ -82,4 +82,15 @@ body {
   .none {
     width: 45% auto;
   }
+
+  #after_submit {
+    display: none;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ff5459;
+    width: 600px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+  }
+
 }
