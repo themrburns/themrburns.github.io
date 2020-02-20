@@ -72,15 +72,15 @@ body {
   }
 
   .all {
-    width: 45% auto;
+    size: 45% auto;
   }
 
   .ok {
-    width: 45% auto;
+    size: 45% auto;
   }
 
   .none {
-    width: 45% auto;
+    size: 45% auto;
   }
 
   #after_submit {
