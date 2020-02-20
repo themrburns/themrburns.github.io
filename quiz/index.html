@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rafi's Kwiz!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <h2 class="title">This is<b><i> the easiest quiz</i></b> on the internet</h2>
+    <form id="quiz" name="quiz">
+      <div class="questions">
+        <div class="indiv">
+            <p>1. Which of these is invented by Leonardo daVinci?</p>
+            <input id="mc" type="radio" name="question1" value="Parachute"> Parachute<br>
+            <input type="radio" id="mc" name="question1" value="Piano"> Piano<br>
+            <input type="radio" id="mc" name="question1" value="Fireworks"> Fireworks
+            <br>
+            <p>2. What is the most famous building in Sydney, Australia?</p>
+            <input id="mc" type="radio" name="question2" value="MichaelEdwardHastingsCastle"> Michael Edward Hastings's Castle<br>
+            <input type="radio" id="mc" name="question2" value="Opera"> Opera<br>
+            <input type="radio" id="mc" name="question2" value="GoldCoast"> Gold Coast
+            <br>
+            <p>3. What is the capital of Australia? (Case Sensitive!!!)</p>
+            <input type="text" name="question3" id="textbox">
+            <br>
+            <br>
+            <br>
+            <input type="button" id="button" name="button" onclick="check()" value="I'm Finished!" class="button">
+          </div>
+      </div>
+    </form>
+    <!---Debriefing----->
+    <div id="after_submit">
+      <p id="message"></p>
+      <p id="number_correct"></p>
+      <img src="" id="pic">
+    </div>
+  </body>
+</html>

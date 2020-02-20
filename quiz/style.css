@@ -1,0 +1,59 @@
+.title {
+  font-family: Lato;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.indiv {
+  margin-left: 10px;
+  display: inline-block;
+  text-align: left;
+  background: #d2def2;
+  padding: 10px 20px 10px 20px;
+  width: 400px;
+  border-radius: 20px;
+}
+
+
+.questions {
+  text-align: center;
+}
+
+
+body {
+  font-family: Lato;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+
+.button {
+  background-color: #008CBA; /* BLUe (Bold Like Us e) */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: Lato;
+  transition-duration: .5s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid #4CAF50;
+  color: black;
+}
+
+#after_submit {
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ff5459;
+  width: 600px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+}
