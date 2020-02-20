@@ -58,6 +58,19 @@ body {
   border-radius: 20px;
 }
 
+.all {
+  width: 1000px;
+}
+
+.ok {
+  height: 1000px;
+
+}
+
+.none {
+  width: 500px;
+}
+
 
 @media only screen and (max-width: 768px) {
   .indiv {
