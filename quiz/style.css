@@ -71,4 +71,15 @@ body {
     width: 100% auto;
     border-radius: 20px;
   }
+
+  #after_submit {
+    display: none;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ff5459;
+    width: 100% auto;
+    height: 35% auto;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+  }
 }
