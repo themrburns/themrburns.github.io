@@ -3,8 +3,50 @@
   <head>
     <meta charset="utf-8">
     <title>Qwawesome website!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <p>Here is everything about coconut-nuts!</p>
+    <div class="vidtitle">
+      <h1>Welcome to Rafi's new website!</h1>
+      <video autoplay muted loop id="myVideo" class="vidbgrnd">
+        <source src="webvid.mp4" type="video/mp4">
+      </video>
+    </div>
   </body>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .vidtitle {
+      position: absolute;
+      top: 40%;
+      color: white;
+      font-size: 30px;
+      width:100%;
+      text-align:center
+    }
+
+    .vidbgrnd {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 50%;
+      z-index: -1;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .vidtitle {
+        position: absolute;
+        top: 30%;
+        color: white;
+        font-size: 30px;
+        width:100%;
+        text-align:center
+      }
+    }
+  </style>
 </html>
