@@ -36,7 +36,7 @@ var range;
     range = 0;
   }
 
-  document.getElementById("after_submit").style.display = "block !important"
+  document.getElementById("after_submit").style.display = "block"
 
 
   document.getElementById("message").innerHTML = messages[range];
