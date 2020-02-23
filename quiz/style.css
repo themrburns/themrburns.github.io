@@ -82,15 +82,13 @@ body {
   }
 
   .all {
-    size: 45% auto;
+    max-width: 320px;
+    width: 100%;
   }
 
   .ok {
-    size: 45% auto;
-  }
-
-  .none {
-    size: 45% auto;
+    max-width: 320px;
+    width: 100%;
   }
 
   #after_submit {
