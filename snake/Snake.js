@@ -5,6 +5,7 @@ function Snake() {
   this.yspeed = 0;
   this.total = 0;
   this.tail = [];
+  this.die = 0;
 
   this.dir = function(x, y) {
     this.xspeed = x;
@@ -26,8 +27,7 @@ function Snake() {
       var pos = this.tail[i];
       var d = dist(this.x, this.y, pos.x, pos.y);
       if (d < 1) {
-        this.total = 0;
-        this.tail = [];
+        this.die = 1;
       }
     }
   }
@@ -40,6 +40,10 @@ function Snake() {
     }
 
     this.tail[this.total-1] = createVector(this.x, this.y);
+    if (this.die > 0) {
+      this.tail[];
+      this.total = 0;
+    }
 
     this.x = this.x + this.xspeed*$scale;
     this.y = this.y + this.yspeed*$scale;

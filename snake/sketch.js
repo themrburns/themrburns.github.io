@@ -4,10 +4,11 @@ var food;
 
 function setup() {
   console.log('setup');
-  createCanvas(600, 600);
+  let canvas = createCanvas(600, 600);
   s = new Snake();
   frameRate(10);
   pickLocation();
+  canvas.center('horizontal');
 }
 
 function pickLocation() {
@@ -28,6 +29,7 @@ function draw() {
 
 
 
+
   fill(255, 0, 100);
   rect(food.x, food.y, $scale, $scale)
 }
@@ -41,6 +43,10 @@ function keyPressed() {
     s.dir(-1, 0);
   } else if (keyCode === 39) {
     s.dir(1, 0);
+  } else if (keyCode === 80) {
+    noLoop();
+  } else if (keyCode === 82) {
+    loop();
   }
 }
 
