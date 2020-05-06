@@ -41,7 +41,7 @@ function Snake() {
 
     this.tail[this.total-1] = createVector(this.x, this.y);
     if (this.die > 0) {
-      this.tail[];
+      this.tail = [];
       this.total = 0;
     }
 
