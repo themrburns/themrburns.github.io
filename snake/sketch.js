@@ -1,11 +1,11 @@
-var s;
+var snake;
 var $scale = 20;
 var food;
 
 function setup() {
   console.log('setup');
   let canvas = createCanvas(600, 600);
-  s = new Snake();
+  snake = new Snake();
   frameRate(10);
   pickLocation();
   canvas.center('horizontal');
@@ -20,10 +20,10 @@ function pickLocation() {
 
 function draw() {
   background(51);
-  s.death();
-  s.update();
-  s.show();
-  if (s.eat(food)) {
+  snake.death();
+  snake.update();
+  snake.show();
+  if (snake.eat(food)) {
     pickLocation();
   }
 
@@ -35,34 +35,51 @@ function draw() {
 }
 
 function keyPressed() {
-  if (keyCode === 38) {
-    s.dir(0, -1);
-  } else if (keyCode === 40) {
-    s.dir(0, 1);
-  } else if (keyCode === 37) {
-    s.dir(-1, 0);
-  } else if (keyCode === 39) {
-    s.dir(1, 0);
-  } else if (keyCode === 80) {
-    noLoop();
-  } else if (keyCode === 82) {
-    loop();
+  // if snake is moving in the x axis in the positive direction and we press the left arrow, we want nothing to happen
+  // the same should apply to the other three directions
+
+    if (keyCode === 38) { //down arrow
+      if (1 == snake.yspeed) {
+        return;
+      }
+      snake.dir(0, -1);
+  } else if (keyCode === 40) { //up arrow
+      if (-1 == snake.yspeed) {
+        return;
+      }
+
+      snake.dir(0, 1);
+  } else if (keyCode === 37) { //left arrow
+      if (1 == snake.xspeed) {
+        return;
+      }
+
+      snake.dir(-1, 0);
+  } else if (keyCode === 39) { //right arrow
+      if (-1 == snake.xspeed) {
+        return;
+      }
+      snake.dir(1, 0);
+  } else if (keyCode === 80) { //p button / pause
+      noLoop();
+  } else if (keyCode === 82) { //r button / resume / unpause
+      loop();
   }
 }
 
 // function Snake() {
-//   this.x = 0;
-//   this.y = 0;
-//   this.xspeed = 1;
-//   this.yspeed = 0;
+//   thisnake.x = 0;
+//   thisnake.y = 0;
+//   thisnake.xspeed = 1;
+//   thisnake.yspeed = 0;
 //
-//   this.update = function() {
-//     this.x = this.x + this.xspeed;
-//     this.y = this.y + this.yspeed;
+//   thisnake.update = function() {
+//     thisnake.x = thisnake.x + thisnake.xspeed;
+//     thisnake.y = thisnake.y + thisnake.yspeed;
 //   }
 //
-//   this.show = function() {
+//   thisnake.show = function() {
 //     fill(255);
-//     rect(this.x, this.y, 10, 10);
+//     rect(thisnake.x, thisnake.y, 10, 10);
 //   }
 // }
