@@ -1,0 +1,18 @@
+.gridItem {
+  border: 1px solid black;
+  height: 80px;
+  width: 80px;
+  font-size: 39px;
+  text-align: middle center;
+  font-weight: bold;
+}
+
+.board {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 0px;
+}
+
+.board-wrapper {
+  text-align: center;
+}
